@@ -47,3 +47,14 @@ td {
 .alert-alert {
   @extend .alert-danger;
 }
+
+.field_with_errors {
+  display: contents;
+
+  // ***** 以下を修正 *****
+  input,
+  textarea {
+    @extend .is-invalid;
+  }
+  // ***** 以上を修正 *****
+}
