@@ -12,9 +12,16 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
-    <%= render "layouts/flash" %>
-
-    <%= yield %>
+    <!-- ***** 以下を修正 ***** -->
+    <header>
+      <%= render "layouts/header" %>
+    </header>
+    <main>
+      <%= render "layouts/flash" %>
+      <div class="base-container">
+        <%= yield %>
+      </div>
+    </main>
+    <!-- ***** 以上を修正 ***** -->
   </body>
 </html>
